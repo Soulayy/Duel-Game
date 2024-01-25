@@ -1,0 +1,84 @@
+body {
+    padding: 0%;
+    margin: 0%;
+    width: 100vw;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./../img/frieza-dragon-ball-dragon-ball-z-kai-dragon-ball-super-wallpaper.jpg);
+    background-size: cover;
+} 
+
+.page1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 70%;
+    
+}
+
+#perso1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    margin: 0%;
+    padding: 0%;
+}
+
+#perso1 h2 {
+    padding: 0%;
+    margin: 2%;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#perso2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.card:hover {
+    box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
+    border-radius: 30%;
+}
+
+
+
+.card img {
+    background-size: contain;
+    border-radius: 30%;
+
+}
+
+#perso2 h2 {
+    padding: 0%;
+    margin: 2%;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+a {
+    width: 200px;
+    height: 300px;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+}
+
