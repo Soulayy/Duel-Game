@@ -1,7 +1,4 @@
-let cherche = document.querySelectorAll("a")
-
-let attackGoku = document.querySelector(".kame")
-
+let selectSeiyan = document.querySelectorAll("a")
 
 
 class Goku {
@@ -10,20 +7,20 @@ class Goku {
         this.attack = attack;
         this.pv = pv;
     }
-
+    
     kamehameha(ennemi) {
         if (ennemi.pv > 0) {
             ennemi.pv = ennemi.pv - this.attack
             console.log(`il rest a ${ennemi.nom} => ${ennemi.pv}`);
-
+            
         } 
     }
-
+    
     poingG(ennemi) {
         if (ennemi.pv > 0) {
             ennemi.pv = ennemi.pv - this.attack / 2
             console.log(`il rest a ${ennemi.nom} => ${ennemi.pv}`);
-
+            
         } 
     }
 }
@@ -36,16 +33,16 @@ let goku = new Goku ("Goku", 350, 500)
 
 class Freezer { // Définition de la classe Boss
     constructor(nom, attaque, pv) {
-      this.nom = nom;
-      this.attaque = attaque;
-      this.pv = pv;
+        this.nom = nom;
+        this.attaque = attaque;
+        this.pv = pv;
     }
-
+    
     purpleBall(ennemi) {
         if (ennemi.pv > 0) {
             ennemi.pv = ennemi.pv - this.attack
             console.log(`il rest a ${ennemi.nom} => ${ennemi.pv}`);
-
+            
         } 
     }
 }
@@ -53,21 +50,26 @@ class Freezer { // Définition de la classe Boss
 let freezer = new Freezer ("Freezer", 230, 660)
 
 let startbtn = document.querySelector(".click")
-let imgattack = document.querySelector(".dbz")
+let noFight = document.querySelectorAll("#noFight")[0]
+let attackGoku = document.querySelector(".kame")
+
 
 // startbtn.addEventListener("click", () => {
     // while (freezer.pv > 0 || goku.pv > 0) {
-    
+        
         attackGoku.addEventListener("click", () => {
-            console.log(freezer.pv);
             goku.kamehameha(freezer)
-            // imgattack.src = "./../img/idea/d38utwg-d37d78c1-61ab-4953-8ed1-acea91b3f4fa.gif"
+            noFight.style.display = "none"
+            gokuPoing.style.display = "flex"
+            
+            
             console.log(freezer.pv);
             setTimeout(() => {
-                imgattack.src = ""
+                noFight.style.display = "flex"
+                gokuPoing.style.display = "none"            
                 
-            }, 6000);
+            }, 2000);
         })
-
-    // }
-// })
+        
+        // }
+        // })
