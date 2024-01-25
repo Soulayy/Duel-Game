@@ -52,6 +52,8 @@ let freezer = new Freezer ("Freezer", 230, 660)
 let startbtn = document.querySelector(".click")
 let noFight = document.querySelectorAll("#noFight")[0]
 let attackGoku = document.querySelector(".kame")
+let gokuPoing = document.querySelector(".attackOne")
+
 
 
 // startbtn.addEventListener("click", () => {
@@ -62,13 +64,12 @@ let attackGoku = document.querySelector(".kame")
             noFight.style.display = "none"
             gokuPoing.style.display = "flex"
             
-            
             console.log(freezer.pv);
             setTimeout(() => {
                 noFight.style.display = "flex"
                 gokuPoing.style.display = "none"            
                 
-            }, 2000);
+            }, 13000);
         })
         
         // }
