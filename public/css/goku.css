@@ -59,6 +59,23 @@ body {
     align-items: center;
 }
 
+#divFourAttackG {
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.final-kamehamea {
+    display: flex;
+    width: 70%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
 #noFight {
     display: flex;
     /* background-color: red; */
