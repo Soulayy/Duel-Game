@@ -4,3 +4,6 @@
 // })
 
 
+let audioo = document.querySelector("audio")
+
+audioo.volume = 0.001

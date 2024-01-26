@@ -72,6 +72,10 @@ let fourDivG = document.getElementById("divFourAttackG")
 
 let btnFinalKame = document.querySelector(".final-kamehamea")
 
+let fiveDivG = document.getElementById("divFiveAttackG")
+
+let btnfinalAttack = document.querySelector(".attackfusion")
+
 let fusion = 0
 
 // startbtn.addEventListener("click", () => {
@@ -90,7 +94,6 @@ let fusion = 0
             }, 9600);
             //?9600
             fusion++
-            console.log(comp);
             if (fusion == 2) {
                 btnFusion.disabled = ""
             }
@@ -115,8 +118,33 @@ let fusion = 0
                 btnFusion.disabled = ""
             }
         })
+        
+        btnFusion.addEventListener("click", () => {
 
+            noFight.style.display = "none"
+            treeDivG.style.display = "flex"
+            
+            console.log(broly.pv);
+            setTimeout(() => {
+                noFight.style.display = "flex"
+                treeDivG.style.display = "none"            
+                btnFusion.disabled = "true"
+                btnKame.disabled = "true"
+                btnKikodan.disabled = "true"
+                btnFinalKame.disabled = ""
+                btnfinalAttack.disabled = ""
+                // btnFusion.disabled = "true"
 
+            }, 10480);
+            //?10480
+            // comp++
+            // console.log(comp);
+            // if (comp == 2) {
+            //     btnFusion.disabled = ""
+            //     console.log(btnBoules);
+            // }
+        })
+        
         btnFinalKame.addEventListener("click", () => {
 
             goku.finalKameHaMeHa(broly)
@@ -134,28 +162,17 @@ let fusion = 0
         })
         
        
-
-        btnFusion.addEventListener("click", () => {
-
+        btnfinalAttack.addEventListener("click", () => {
+            goku.kamehameha(broly)
             noFight.style.display = "none"
-            treeDivG.style.display = "flex"
+            fiveDivG.style.display = "flex"
             
             console.log(broly.pv);
             setTimeout(() => {
                 noFight.style.display = "flex"
-                treeDivG.style.display = "none"            
-                btnFusion.disabled = "true"
-                btnKame.disabled = "true"
-                btnKikodan.disabled = "true"
-                btnFinalKame.disabled = ""
-                // btnFusion.disabled = "true"
-
-            }, 10480);
-            //?10480
-            // comp++
-            // console.log(comp);
-            // if (comp == 2) {
-            //     btnFusion.disabled = ""
-            //     console.log(btnBoules);
-            // }
+                fiveDivG.style.display = "none"            
+                
+            }, 14800);
+            //?9600
+            
         })
