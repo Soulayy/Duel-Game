@@ -87,7 +87,7 @@ let fusion = 0
                 noFight.style.display = "flex"
                 firstDivG.style.display = "none"            
                 
-            }, 100);
+            }, 9600);
             //?9600
             fusion++
             console.log(comp);
@@ -107,7 +107,7 @@ let fusion = 0
                 noFight.style.display = "flex"
                 secondDivG.style.display = "none"            
                 
-            }, 200);
+            }, 11200);
             //?11200
             fusion++
             console.log(fusion);
