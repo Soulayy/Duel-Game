@@ -144,8 +144,8 @@ body {
 .btntop {
     display: flex;
     /* background-color: red; */
-    height: 30%;
-    width: 60%;
+    height: 15%;
+    width: 50%;
     gap: 20px;
 }
 
