@@ -7,10 +7,14 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url(./../img/frieza-dragon-ball-dragon-ball-z-kai-dragon-ball-super-wallpaper.jpg);
+    background-image: url(./../img/bk85.jpg);
     background-size: cover;
 } 
 
+body h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
 .page1 {
     display: flex;
     justify-content: center;
@@ -35,8 +39,9 @@ body {
     padding: 0%;
     margin: 2%;
     color: rgb(255, 255, 255);
-    font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
 }
 #perso2{
     display: flex;
@@ -66,8 +71,9 @@ body {
     padding: 0%;
     margin: 2%;
     color: rgb(255, 255, 255);
-    font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
 }
 
 img {
@@ -76,9 +82,22 @@ img {
 }
 
 a {
-    width: 200px;
-    height: 300px;
-    background-color: rgb(0, 0, 0);
+    width: 80px;
+    height: 50px;
+    background: #EE5203;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8%;
+}
+
+a:hover {
+    box-shadow: #EE5203 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background-color: white;
+    color: black;
 }
 

@@ -1,0 +1,33 @@
+.parentBroly {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    /* background-color: rgb(0, 229, 255); */
+}
+
+.broly {
+    width: 100%;
+    height: 68.2%;
+    display: flex;
+    /* background-color: rgb(255, 0, 0); */
+    justify-content: end;
+    align-items: start;
+}
+
+.nameB {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: purple; */
+    padding-right: 10%;
+    height: 100%;
+}
+
+.nameB img {
+    border: 2px solid black;
+    border-radius: 30%;
+    height: 80%;
+}

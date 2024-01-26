@@ -33,7 +33,7 @@ class Vegeta {
 
 let vegeta = new Vegeta ("Vegeta", 330, 435)
 
-class Freezer { // Définition de la classe Boss
+class Broly { // Définition de la classe Boss
     constructor(nom, attaque, pv) {
       this.nom = nom;
       this.attaque = attaque;
@@ -49,20 +49,31 @@ class Freezer { // Définition de la classe Boss
     }
 }
 
-let freezer = new Freezer ("Freezer", 230, 660)
+let broly = new Broly ("Broly", 230, 660)
 
-let startbtnV = document.querySelector(".clickV")
+let noFight = document.querySelectorAll("#noFight")[0]
+
+let attackGoku = document.querySelector(".kame-ha-mea")
+
+let gokuPoing = document.querySelector(".attackOne")
 
 
-startbtnV.addEventListener("click", () => {
-    // while (freezer.pv <= 0 || vegeta.pv <= 0) {
-        freezer.purpleBall(vegeta)
-        console.log(vegeta);
-        vegeta.finalFlash(freezer)
+
+// startbtn.addEventListener("click", () => {
+    // while (freezer.pv > 0 || goku.pv > 0) {
         
-        console.log(freezer);
-        vegeta.poingV(freezer)
-        console.log(freezer);
-
-    // }
-})
+        attackGoku.addEventListener("click", () => {
+            goku.kamehameha(broly)
+            noFight.style.display = "none"
+            gokuPoing.style.display = "flex"
+            
+            console.log(broly.pv);
+            setTimeout(() => {
+                noFight.style.display = "flex"
+                gokuPoing.style.display = "none"            
+                
+            }, 13000);
+        })
+        
+        // }
+        // })

@@ -35,6 +35,11 @@ body {
     background-repeat: no-repeat;
 }
 
+#noFight {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .parentGoku {
     width: 50%;
     height: 100%;
@@ -52,7 +57,6 @@ body {
     justify-content: center;
     align-items: center;
     padding-left: 10%;
-
 }
 
 .name {
@@ -61,30 +65,37 @@ body {
     flex-direction: column;
     align-items: center;
     /* background-color: purple; */
+    width: 40%;
+    height: 80%;
+
 }
 
 .name img {
     border: 2px solid black;
     border-radius: 30%;
+    height: 100%;
+    background-color: blue;
 }
 
 .btnG {
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
     /* background-color: green; */
     flex-direction: column;
-    gap: 10px;
-
+    gap: 20px;
 }
+
+
 
 .btntop {
     display: flex;
     /* background-color: red; */
     height: 30%;
     width: 60%;
+    gap: 20px;
 }
 
 .btntop button {
@@ -98,20 +109,35 @@ body {
     /* background-color: red; */
     height: 30%;
     width: 60%;
+    gap: 20px;
+
 }
 
-.btnbot button {
+.btntop button {
     background-color: rgb(0, 13, 255);
     height: 100%;
     width: 50%;
-    
+    border-radius: 30%;
+
 }
 
 .btnbot button {
     background-color: rgb(255, 149, 0);
     height: 100%;
     width: 50%;
+    border-radius: 30%;
+}
+
+.btnbot button:last-child {
+    background-color: rgb(128, 0, 0);
+}
+.btntop button:last-child {
+    background-color: rgb(120, 0, 104);
 }
 
 
 
+.btntop button:hover, .btnbot button:hover{
+    box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
+    background-color: white;
+}
