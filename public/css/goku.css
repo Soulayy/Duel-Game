@@ -93,12 +93,30 @@ body {
     align-items: center;
 }
 
+
+#divBeginsAttackG {
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.beginsAttack {
+    display: flex;
+    width: 70%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
 #noFight {
     display: flex;
     /* background-color: red; */
     width: 100%;
     height: 915px;
-    background-image: url(./../img/BackG.jpg);
+    background-image: url(./../img/bbkgrounddbz.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -133,16 +151,27 @@ body {
     flex-direction: column;
     align-items: center;
     /* background-color: purple; */
-    width: 40%;
+    width: 50%;
     height: 80%;
-
+    animation: START 4s infinite;
 }
 
+@keyframes START
+{     50%
+    
+{       transform: translate(20px,-15px);           }   }
 .name img {
-    border: 2px solid black;
-    border-radius: 30%;
+    height: 70%;
+}
+
+#poseGF {
+    display: none; 
+    height: 100%;   
+}
+
+#poseGF img{
+    display: flex;    
     height: 100%;
-    background-color: blue;
 }
 
 
@@ -155,7 +184,7 @@ body {
     justify-content: end;
     /* background-color: green; */
     flex-direction: column;
-    gap: 20px;
+    /* gap: 20px; */
 }
 
 
@@ -183,8 +212,38 @@ body {
     font-weight: bold;
 }
 
+.progresseBarreContainer {
+    width: 280px;
+    height: 110px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    flex-direction: column;
+}
+
+.progresseBarreContainer h1 {
+    margin: 0%;
+    padding: 0%;
+    color: rgb(255, 255, 255);
+}
+
+.progresseInside {
+    width: 100%;
+    height: 20%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 1%;
+}
+.pv {
+    width: 98%;
+    height: 80%;
+    background-color: rgb(185, 0, 0);
+}
+
 .btnbot button {
-    background-color: rgb(71, 213, 0);
+    background-color: rgb(67, 112, 45);
     height: 70%;
     width: 33%;
     color: rgb(0, 0, 0);
@@ -237,7 +296,8 @@ audio {
     transition: 250em;
     left: 32em;
     transform: rotate(20deg);
-    animation: round 5s infinite ease;
+    animation: round 8s infinite both;
+
 }
 
 .satellite::after{
@@ -284,8 +344,8 @@ audio {
 
     0%,
     100% {
-        top: 2em;
-        left: -15em;
+        top: 1em;
+        left: 0em;
         box-shadow: -2em    0   5em 0.5em #c6836466;
         z-index: 2;
     }
@@ -306,11 +366,11 @@ audio {
     50% {
         left: 40em;
         top: 20em;
-        z-index: -1;
+        z-index: 2;
         box-shadow: 2em 0   5em 0.5em #845a4682;
     }
 
     99% {
-        z-index: -1;
+        z-index: 2;
     }
 }
