@@ -180,7 +180,7 @@ function startfight() {
         beginsFight.style.display ="none"
         noFight.style.display = "flex"
 
-    }, 100);
+    }, 5000);
     //5000
     //20000
 }
@@ -201,15 +201,15 @@ startfight()
                     noFight.style.display = "none"
                     firstDivG.style.display = "flex"   
                     setTimeout(() => {
-                        noFight.style.display = "none"
-                        firstAttBroly.style.display = "flex"
-                        setTimeout(() => {
-                            firstAttBroly.style.display = "none"
-                            noFight.style.display = "flex"
-                        }, 16000);
+                        noFight.style.display = "flex"
+                        // firstAttBroly.style.display = "flex"
+                        // setTimeout(() => {
+                        //     firstAttBroly.style.display = "none"
+                        //     noFight.style.display = "flex"
+                        // }, 100);
                         //16000
                         firstDivG.style.display = "none"
-                    },5000);
+                    },5800);
                     //9600
                     if (broly.pv <= 0) {
                         alert("You win")
@@ -225,6 +225,7 @@ startfight()
             fusion++
             if (fusion == 2) {
                 btnFusion.disabled = ""
+                btnFusion.style.opacity = "100%"
             }
         })
 
@@ -243,15 +244,11 @@ startfight()
                 noFight.style.display = "none"
                     secondDivG.style.display = "flex"   
                     setTimeout(() => {
-                        noFight.style.display = "none"
-                        firstAttBroly.style.display = "flex"
-                        setTimeout(() => {
-                            firstAttBroly.style.display = "none"
-                            noFight.style.display = "flex"
-                        }, 16000);
+                        noFight.style.display = "flex"
+                        
                         //16000
                         secondDivG.style.display = "none"
-                    }, 11200);
+                    }, 20000);
                     //11200
                     if (broly.pv <= 0) {
                         alert("You win")
@@ -270,6 +267,8 @@ startfight()
             console.log(fusion);
             if (fusion == 2) {
                 btnFusion.disabled = ""
+                btnFusion.style.opacity = "100%"
+
             }
         })
 
@@ -283,6 +282,7 @@ let imgvegetaBlue = document.getElementById("poseGF")
             noFight.style.display = "none"
             treeDivG.style.display = "flex"
             imgvegeta.style.display = "none"
+
             
             console.log(broly.pv);
             setTimeout(() => {
@@ -293,7 +293,10 @@ let imgvegetaBlue = document.getElementById("poseGF")
                 btnKikodan.disabled = "true"
                 btnFinalKame.disabled = ""
                 btnfinalAttack.disabled = ""
+                btnFinalKame.style.opacity = "100%"
+                btnfinalAttack.style.opacity = "100%"
                 imgvegetaBlue.style.display = "flex"
+                btnFusion.style.opacity = "20%"
             }, 10480);
             //10480
         })
@@ -308,12 +311,12 @@ let imgvegetaBlue = document.getElementById("poseGF")
                 noFight.style.display = "none"
                 fourDivG.style.display = "flex"   
                 setTimeout(() => {
-                noFight.style.display = "none"
-                firstAttBroly.style.display = "flex"
-                setTimeout(() => {
-                    firstAttBroly.style.display = "none"
-                    noFight.style.display = "flex"
-                },16000);
+                noFight.style.display = "flex"
+                // firstAttBroly.style.display = "flex"
+                // setTimeout(() => {
+                //     firstAttBroly.style.display = "none"
+                //     noFight.style.display = "flex"
+                // },16000);
                 //16000
                 fourDivG.style.display = "none"
                 }, 14900);
@@ -343,12 +346,12 @@ let imgvegetaBlue = document.getElementById("poseGF")
             noFight.style.display = "none"
                 fiveDivG.style.display = "flex"   
                 setTimeout(() => {
-                noFight.style.display = "none"
-                firstAttBroly.style.display = "flex"
-                setTimeout(() => {
-                    firstAttBroly.style.display = "none"
-                    noFight.style.display = "flex"
-                },16000);
+                noFight.style.display = "flex"
+                // firstAttBroly.style.display = "flex"
+                // setTimeout(() => {
+                //     firstAttBroly.style.display = "none"
+                //     noFight.style.display = "flex"
+                // },16000);
                 //16000
                 fiveDivG.style.display = "none"
                 }, 15000);

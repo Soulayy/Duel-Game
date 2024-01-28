@@ -167,7 +167,7 @@ function startfight() {
         beginsFight.style.display ="none"
         noFight.style.display = "flex"
 
-    }, 20000);
+    }, 100);
     //20000
 }
 
@@ -211,6 +211,7 @@ startfight()
             fusion++
             if (fusion == 2) {
                 btnFusion.disabled = ""
+                btnFusion.style.opacity = "100%"
             }
         })
 
@@ -256,6 +257,7 @@ startfight()
             console.log(fusion);
             if (fusion == 2) {
                 btnFusion.disabled = ""
+                btnFusion.style.opacity = "100%"
             }
         })
 
@@ -279,7 +281,10 @@ let imgGokuBlue = document.getElementById("poseGF")
                 btnKikodan.disabled = "true"
                 btnFinalKame.disabled = ""
                 btnfinalAttack.disabled = ""
-                imgGokuBlue.style.display = "flex"
+                btnFinalKame.style.opacity = "100%"
+                btnfinalAttack.style.opacity = "100%"
+                imgvegetaBlue.style.display = "flex"
+                btnFusion.style.opacity = "25%"
             }, 10480);
             //10480
         })
@@ -294,12 +299,12 @@ let imgGokuBlue = document.getElementById("poseGF")
                 noFight.style.display = "none"
                 fourDivG.style.display = "flex"   
                 setTimeout(() => {
-                noFight.style.display = "none"
-                firstAttBroly.style.display = "flex"
-                setTimeout(() => {
-                    firstAttBroly.style.display = "none"
-                    noFight.style.display = "flex"
-                },16000);
+                noFight.style.display = "flex"
+                // firstAttBroly.style.display = "flex"
+                // setTimeout(() => {
+                //     firstAttBroly.style.display = "none"
+                //     noFight.style.display = "flex"
+                // },16000);
                 //16000
                 fourDivG.style.display = "none"
                 }, 14900);
@@ -329,12 +334,12 @@ let imgGokuBlue = document.getElementById("poseGF")
             noFight.style.display = "none"
                 fiveDivG.style.display = "flex"   
                 setTimeout(() => {
-                noFight.style.display = "none"
-                firstAttBroly.style.display = "flex"
-                setTimeout(() => {
-                    firstAttBroly.style.display = "none"
-                    noFight.style.display = "flex"
-                },16000);
+                noFight.style.display = "flex"
+                // firstAttBroly.style.display = "flex"
+                // setTimeout(() => {
+                //     firstAttBroly.style.display = "none"
+                //     noFight.style.display = "flex"
+                // },16000);
                 //16000
                 fiveDivG.style.display = "none"
                 }, 15000);

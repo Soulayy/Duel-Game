@@ -33,7 +33,7 @@ body h1 {
     margin: 0%;
     padding: 0%;
     background-color: red;
-    background-image: url(./../img/vtgaVatar.jpg);
+    background-image: url(./../img/vegeta/966cdef874893db0e909031f4888e336.jpg);
     background-repeat:no-repeat;
     background-size: cover;
 }
@@ -44,7 +44,7 @@ body h1 {
     color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: black;
+    
 }
 #perso2{
     display: flex;
@@ -55,8 +55,7 @@ body h1 {
     height: 100%;
     margin: 0%;
     padding: 0%;
-    background-color: rgb(0, 51, 255);
-    background-image: url(./../img/avatarGoku.jpg);
+    background-image: url(./../img//vegeta/3ac980ebcd10820a6fbf5b7370ff393a.jpg);
     background-repeat:no-repeat;
     background-size: cover;
 }
@@ -107,6 +106,7 @@ a {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 8%;
+    font-weight: bold;
 }
 
 a:hover {
@@ -115,3 +115,13 @@ a:hover {
     color: black;
 }
 
+#perso1 h2, #perso2 h2 {
+    background-color: rgba(255, 102, 0, 0.619);
+    border-radius: 5%;
+    color: white;
+    border: 2px solid black;
+}
+
+.card {
+    padding-top: 450px;
+}

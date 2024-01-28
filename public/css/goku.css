@@ -116,7 +116,8 @@ body {
     /* background-color: red; */
     width: 100%;
     height: 915px;
-    background-image: url(./../img/bbkgrounddbz.png);
+    /* background-image: url(./../img/bbkgrounddbz.png); */
+    background-image: url(./../img/bkOne.gif);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -243,11 +244,12 @@ body {
 }
 
 .btnbot button {
-    background-color: rgb(67, 112, 45);
+    background-color: rgb(35, 102, 2);
     height: 70%;
     width: 33%;
     color: rgb(0, 0, 0);
     font-weight: bold;
+    opacity: 60%;
 }
 
 .btnbot button:last-child {
