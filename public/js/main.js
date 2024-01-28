@@ -1,58 +1,7 @@
 let selectSeiyan = document.querySelectorAll("a")
 
+//! Goku 
 
-
-class Goku {
-    constructor(nom, attack, pv) {
-        this.nom = nom;
-        this.attack = attack;
-        this.pv = pv;
-    }
-    
-    kamehameha(ennemi) {
-        if (ennemi.pv > 0) {
-            ennemi.pv = ennemi.pv - this.attack
-            console.log(`il rest a ${ennemi.nom} => ${ennemi.pv}`);
-            pvB.style.width = 
-        } 
-    }
-    
-    kikodan(ennemi) {
-        if (ennemi.pv > 0) {
-            ennemi.pv = ennemi.pv - this.attack + (this.attack /100 * 40)  
-            console.log(`il rest a ${ennemi.nom} => ${ennemi.pv}`);
-            
-        } 
-    }
-    
-    finalKameHaMeHa(ennemi) {
-        if (ennemi.pv > 0) {
-            ennemi.pv = ennemi.pv - this.attack + (this.attack /100 * 60)  
-            console.log(`il rest a ${ennemi.nom} => ${ennemi.pv}`);
-        } 
-    }
-}
-
-
-let goku = new Goku ("Goku", 350, 1000)
-
-
-class Broly { // Définition de la classe Boss
-    constructor(nom, attaque, pv) {
-        this.nom = nom;
-        this.attaque = attaque;
-        this.pv = pv;
-    }
-    
-    purpleBall(ennemi) {
-        if (ennemi.pv > 0) {
-            ennemi.pv = ennemi.pv - this.attack
-            console.log(`il rest a ${ennemi.nom} => ${ennemi.pv}`);
-        } 
-    }
-}
-
-let broly = new Broly ("Broly", 250, 1000)
 
 let noFight = document.querySelectorAll("#noFight")[0]
 
@@ -80,7 +29,133 @@ let fusion = 0
 
 let pv = document.querySelector(".pv")
 
+let win = document.getElementById("divWin")
+//! end goku
+
+//! BROLY 
+
 let pvB = document.querySelector(".pvB")
+
+let firstAttBroly = document.getElementById("divBrolyAttackB")
+
+//! BROLY 
+
+//?
+//! btn restart
+let restart = document.querySelector(".restart")
+//! btn restart
+//?
+
+class Goku {
+    constructor(nom, attack, pv) {
+        this.nom = nom;
+        this.attack = attack;
+        this.pv = pv;
+    }
+    
+    kamehameha(ennemi) {
+        
+        ennemi.pv = ennemi.pv - this.attack
+        console.log(`il rest a ${ennemi.nom} => ${ennemi.pv}`);
+        moveG(ennemi.pv / 1400 * 100)
+    }
+    
+    kikodan(ennemi) {
+
+        ennemi.pv = ennemi.pv - this.attack + (this.attack /100 * 20)
+        console.log(`il rest a ${ennemi.nom} => ${ennemi.pv}`);
+        moveG(ennemi.pv / 1400 * 100)
+    }
+    
+    finalKameHaMeHa(ennemi) {
+
+        ennemi.pv = ennemi.pv - this.attack + (this.attack /100 * 40)  
+        console.log(`il rest a ${ennemi.nom} => ${ennemi.pv}`);
+        moveG(ennemi.pv / 1400 * 100)
+    }
+
+    ultimateFusion(ennemi) {
+        ennemi.pv = ennemi.pv - this.attack + (this.attack /100 * 60)  
+        console.log(`il rest a ${ennemi.nom} => ${ennemi.pv}`);
+        moveG(ennemi.pv / 1400 * 100)
+    }
+}
+
+let goku = new Goku ("Goku", 250, 1400)
+
+class Broly { // Définition de la classe Boss
+    constructor(nom, attaque, pv) {
+        this.nom = nom;
+        this.attaque = attaque;
+        this.pv = pv;
+    }
+    
+    greenBall(ennemi) {
+        ennemi.pv = ennemi.pv - 250
+        console.log(`il rest a ${ennemi.nom} => ${ennemi.pv}`);
+        move(ennemi.pv / 1400 * 100)
+    }
+
+    fightBroly(ennemi){
+        ennemi.pv = ennemi.pv - 350
+        console.log(`il rest a ${ennemi.nom} => ${ennemi.pv}`);
+        move(ennemi.pv / 1400 * 100)
+
+    }
+
+}
+let broly = new Broly ("Broly", 250, 1400)
+
+//? a revoir le randome
+// let listAttack 
+// let randomAttack
+// let stockRnadome
+
+// function brolyAttack(seiyan) {
+//     listAttack = [broly.greenBall(seiyan), broly.fightBroly(seiyan)];
+//     randomAttack = Math.floor(Math.random() * listAttack.length)
+//     stockRnadome = listAttack[randomAttack]
+// }
+
+//? broly PV
+var i = 0;
+function move(quantity) {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementsByClassName("pvB")[0];
+    var width = 1;
+    var id = setInterval(frame, 15);
+    function frame() {
+      if (width >= quantity) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+
+//? GOKU PV
+var g = 0;
+function moveG(quantity) {
+  if (g == 0) {
+    g = 1;
+    var elemG = document.getElementsByClassName("pv")[0];
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= quantity) {
+        clearInterval(id);
+        g = 0;
+      } else {
+        width++;
+        elemG.style.width = width + "%";
+      }
+    }
+  }
+}
 
 let beginsFight = document.getElementById("divBeginsAttackG")
 
@@ -92,26 +167,47 @@ function startfight() {
         beginsFight.style.display ="none"
         noFight.style.display = "flex"
 
-    }, 100);
+    }, 20000);
     //20000
 }
 
 startfight()
-// startbtn.addEventListener("click", () => {
-    // while (freezer.pv > 0 || goku.pv > 0) {
+
         
         btnKame.addEventListener("click", () => {
             goku.kamehameha(broly)
             noFight.style.display = "none"
             firstDivG.style.display = "flex"
             
-            console.log(broly.pv);
-            setTimeout(() => {
-                noFight.style.display = "flex"
-                firstDivG.style.display = "none"            
-                pv.style.width = "20%"    
-            }, 100);
-            //?9600
+                if (broly.pv <= 0) {
+                    broly.pv = 0
+                    noFight.style.display = "none"
+                    firstDivG.style.display = "none"
+                } else {
+                    noFight.style.display = "none"
+                    firstDivG.style.display = "flex"   
+                    setTimeout(() => {
+                        noFight.style.display = "none"
+                        firstAttBroly.style.display = "flex"
+                        setTimeout(() => {
+                            firstAttBroly.style.display = "none"
+                            noFight.style.display = "flex"
+                        }, 16000);
+                        //16000
+                        firstDivG.style.display = "none"
+                    },9600);
+                    //9600
+                    if (broly.pv <= 0) {
+                        alert("You win")
+                        restart.style.display = "flex"
+                    } else {
+                        broly.greenBall(goku)
+                        if (goku.pv <= 0) {
+                            alert("You lOSS")
+                            restart.style.display = "flex"
+                        }
+                    }
+                }
             fusion++
             if (fusion == 2) {
                 btnFusion.disabled = ""
@@ -125,12 +221,37 @@ startfight()
             secondDivG.style.display = "flex"
             
             console.log(broly.pv);
-            setTimeout(() => {
-                noFight.style.display = "flex"
-                secondDivG.style.display = "none"            
-                
-            }, 100);
-            //?11200
+            if (broly.pv <= 0) {
+                broly.pv = 0
+                noFight.style.display = "none"
+                secondDivG.style.display = "none"
+            } else {
+                noFight.style.display = "none"
+                    secondDivG.style.display = "flex"   
+                    setTimeout(() => {
+                        noFight.style.display = "none"
+                        firstAttBroly.style.display = "flex"
+                        setTimeout(() => {
+                            firstAttBroly.style.display = "none"
+                            noFight.style.display = "flex"
+                        }, 16000);
+                        //16000
+                        secondDivG.style.display = "none"
+                    }, 11200);
+                    //11200
+                    if (broly.pv <= 0) {
+                        alert("You win")
+                        restart.style.display = "flex"
+
+                    } else {
+                        broly.greenBall(goku)
+                        if (goku.pv <= 0) {
+                            alert("You lOSS")
+                            restart.style.display = "flex"
+
+                        }
+                    }
+            }
             fusion++
             console.log(fusion);
             if (fusion == 2) {
@@ -159,14 +280,8 @@ let imgGokuBlue = document.getElementById("poseGF")
                 btnFinalKame.disabled = ""
                 btnfinalAttack.disabled = ""
                 imgGokuBlue.style.display = "flex"
-            }, 180);
-            //?10480
-            // comp++
-            // console.log(comp);
-            // if (comp == 2) {
-            //     btnFusion.disabled = ""
-            //     console.log(btnBoules);
-            // }
+            }, 10480);
+            //10480
         })
 
         
@@ -176,13 +291,31 @@ let imgGokuBlue = document.getElementById("poseGF")
             noFight.style.display = "none"
             fourDivG.style.display = "flex"
             
-            console.log(broly.pv);
-            setTimeout(() => {
-                noFight.style.display = "flex"
-                fourDivG.style.display = "none"            
-                
-            }, 200);
-            //15000
+                noFight.style.display = "none"
+                fourDivG.style.display = "flex"   
+                setTimeout(() => {
+                noFight.style.display = "none"
+                firstAttBroly.style.display = "flex"
+                setTimeout(() => {
+                    firstAttBroly.style.display = "none"
+                    noFight.style.display = "flex"
+                },16000);
+                //16000
+                fourDivG.style.display = "none"
+                }, 14900);
+                //14900
+                if (broly.pv <= 0) {
+                    alert("You win")
+                    restart.style.display = "flex"
+
+                } else {
+                    broly.greenBall(goku)
+                    if (goku.pv <= 0) {
+                        alert("You lOSS")
+                        restart.style.display = "flex"
+
+                    }
+                }
             
             
         })
@@ -193,10 +326,26 @@ let imgGokuBlue = document.getElementById("poseGF")
             noFight.style.display = "none"
             fiveDivG.style.display = "flex"
             
-            console.log(broly.pv);
-            setTimeout(() => {
-                noFight.style.display = "flex"
-                fiveDivG.style.display = "none"            
-                
-            }, 14800);            
+            noFight.style.display = "none"
+                fiveDivG.style.display = "flex"   
+                setTimeout(() => {
+                noFight.style.display = "none"
+                firstAttBroly.style.display = "flex"
+                setTimeout(() => {
+                    firstAttBroly.style.display = "none"
+                    noFight.style.display = "flex"
+                },16000);
+                //16000
+                fiveDivG.style.display = "none"
+                }, 15000);
+                //15000
+                if (broly.pv <= 0) {
+                    alert("You win")
+                } else {
+                    broly.greenBall(goku)
+                    if (goku.pv <= 0) {
+                        alert("You lOSS")
+                    }
+                }
         })
+       

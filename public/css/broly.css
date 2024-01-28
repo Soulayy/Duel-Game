@@ -17,6 +17,61 @@
     flex-direction: column;
 }
 
+#divBrolyAttackB {
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.brolyAttack {
+    display: flex;
+    width: 70%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+#divWin {
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.win {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+}
+
+.restart {
+    height: 50px;
+    width: 100px;
+    display: none;
+    top: 50px;
+    justify-content: center;
+    align-items: center;
+    
+    font-weight: bold;
+    text-decoration: none;
+}
+.restart a {
+    background-color: black;
+    color: white;
+}
+
+
 .nameB {
     display: flex;
     justify-content: start;
@@ -26,7 +81,6 @@
     padding-right: 10%;
     height: 80%;
     animation: START 4s infinite;
-
 }
 @keyframes START
 {     50%
@@ -61,8 +115,9 @@
     align-items: center;
     padding: 1%;
 }
+
 .pvB {
     width: 98%;
     height: 80%;
-    background-color: rgb(185, 0, 0);
+    background-color: red;
 }

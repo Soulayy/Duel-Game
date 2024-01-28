@@ -3,38 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../css/vegeta.css">
     <link rel="stylesheet" href="./../css/broly.css">
+    <link rel="stylesheet" href="./../css/goku.css">
     <title>Vegeta</title>
 </head>
 <body>
     
 
-    <div class="attackOne">
-        <img class="kamehamea" src="./../img/kamehamea.gif" alt="" srcset="">
+    <div class="divFirstAttack">
+        <img class="kamehamea" src="./../img/vegeta/firstattack.gif" alt="" srcset="">
     </div>
+
+    <div id="divSecondAttackG">
+        <img class=".kikodan" src="./../img/vegeta/BANG ONE HAND.gif" alt="" srcset="">
+    </div>
+
+    <div id="divTreeAttackG">
+        <img class=".fusionGV" src="./../img/FusionG&V.gif" alt="" srcset="">
+    </div>
+
+    <div id="divFourAttackG">
+        <img class=".finalKamehamea" src="./../img/FusionKame.gif" alt="" srcset="">
+    </div>
+
+    <div id="divFiveAttackG">
+        <img class=".finalAttackFusion" src="./../img/finalAttack.gif" alt="" srcset="">
+    </div>
+
+    <div id="divBeginsAttackG">
+        <img class=".beginsAttack" src="./../img/vegeta/startfightvegeta.gif" alt="" srcset="">
+    </div>
+
+    <div id="divBrolyAttackB">
+        <img class=".brolyAttack" src="./../img/BrolyAttack.gif" alt="" srcset="">
+    </div>
+
+    <div id="divWin">
+        <img class=".win" src="./../img/YOU.png" alt="" srcset="">
+    </div>
+
+
+
 
     <div id="noFight"> 
 
-        <div class="parentVegeta"> 
+        <div class="parentGoku"> 
 
-            <div class="vegeta">
+            <div class="goku">
                 <div class="name">
-                    <h1>VEGETA</h1>
-                    <img src="./../img/vegeta/vegetaprofile.jpg" srcset="">
+
+                    <!-- <h1>SAN GOKU</h1> -->
+                    <div class="satellite"></div>
+                    <img id="poseF" src="./../img/vegeta/Base_Vegeta_Render.webp" srcset="">
+                    <img id="poseGF" src="./../img/Gogeta.png" srcset="">
+                    
                 </div>
-
-                <div class="btnV">
+                
+                <div class="btnG">
+                    <div class="progresseBarreContainer">
+                        <h1>PV</h1>
+                        <div class="progresseInside">
+                            <div class="pv"></div>
+                        </div>
+                    </div>
                     <div class="btntop">
-
-                        <button class="kame-ha-mea" type="button">veta1</button>
-                        <button class="poingG" type="button">ART MARTIAL</button>
+                        
+                        <button class="kame-ha-mea" type="button">Jeux de jambes</button>
+                        <button class="attackKikodan" type="button" >One hand Bang</button>
                     </div>
 
                     <div class="btnbot">
+                        <button class="fusion" type="button" disabled="true">Gogeta Super Saiyan Blue</button>
 
-                        <button class="kame" type="button">COMBO</button>
-                        <button class="attackfusion" type="button">ULTIMATE FUSION</button>
+                        <button class="final-kamehamea" type="button" disabled="true">Final Kamé Hamé Ha</button>
+                        <button class="attackfusion" type="button" disabled="true">ULTIMATE FUSION</button>
                     </div>
                 </div>
             </div> 
@@ -45,13 +87,26 @@
 
             <div class="broly">
                 <div class="nameB">
-                    <h1>BROLY</h1>
-                    <img src="./../img/broliy/brolyCard.gif" srcset="">
+                    <img src="./../img/BossBroly.png" srcset="">
                 </div>
+                <div class="progresseBarreContainerBroly">
+                    <h1>PV</h1>
+                    <div class="progresseInsideBroly">
+                        <div class="pvB"></div>
+                    </div>
+                </div>
+                
             </div> 
         </div>
+        <button type="button" class="restart">
+            <a href="./../../index.html"> RESTART THE GAME </a>
+        </button>
 
-    <script src="./../js/img.js"></script>
-    <script src="./../js/vegeta.js"></script>
+        <audio controls autoplay >
+            <source src="./../audio/onlymp3.to - Dragon Ball Super Ultimate Battle Ultra instinct Instrumental Epic Rock COVER-SaeXN-MByjU-192k-1706300639.mp3" type="audio/mpeg">
+            <source src="./../audio/onlymp3.to - Dragon Ball Super Ultimate Battle Ultra instinct Instrumental Epic Rock COVER-SaeXN-MByjU-192k-1706300639.mp3" type="audio/wav">
+        </audio>
+        <script src="./../js/img.js"></script>
+        <script src="./../../public/js/vegeta.js"></script>
 </body>
 </html>
