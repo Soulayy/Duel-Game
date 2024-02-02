@@ -167,7 +167,7 @@ function startfight() {
         beginsFight.style.display ="none"
         noFight.style.display = "flex"
 
-    }, 100);
+    }, 20000);
     //20000
 }
 
